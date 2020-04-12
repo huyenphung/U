@@ -1,5 +1,7 @@
 package Stepdef;
 
+import org.junit.Assert;
+
 import Base.testBase;
 import Pages.AccountSuccessPage;
 import Pages.RegisterPage;
@@ -9,7 +11,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import junit.framework.Assert;
+
 
 public class Register {
 	headersPage headers = new headersPage();
@@ -30,8 +32,7 @@ public class Register {
 		// testBase.driver.findElement(By.xpath(headerSection.myAccountLink.toString()));
 		// Elements.click(headerSection.myAccountLink);
 		Thread.sleep(5000);
-		headersPage header = new headersPage();
-		header.myAccountLink().click();
+		headers.myAccountLink.click();
 		// headers.myAccountLink1.click();
 		Thread.sleep(2000);
 		headers.register.click();
@@ -105,11 +106,11 @@ public class Register {
 
 	}
 
-	@Then("^I should see the warning message \"([^\"]*)\"$")
-	public void i_should_see_the_warning_message(String expected) throws Throwable {
-
-		Assert.assertEquals(registerPage.mainWarning, expected);
-	}
+//	@Then("^I should see the warning message \"([^\"]*)\"$")
+//	public void i_should_see_the_warning_message(String expected) throws Throwable {
+//
+//		Assert.assertEquals(registerPage.mainWarning, expected);
+//	}
 
 
 }
