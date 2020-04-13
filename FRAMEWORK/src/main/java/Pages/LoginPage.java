@@ -23,6 +23,12 @@ public class LoginPage {
 	@FindBy(xpath = "//input[@value='Login']")
 	public static WebElement loginBtn;
 
+	@FindBy(css = "div[class$='alert-dismissible']")
+	public static WebElement mainWarning;
+
+	@FindBy(linkText = "Forgotten Password")
+	public static WebElement forgotPassword;
+
 	public static void doLogin(String email, String password) {
 
 		emailLogin.sendKeys(email);
@@ -30,5 +36,7 @@ public class LoginPage {
 		loginBtn.click();
 
 	}
+
+
 
 }

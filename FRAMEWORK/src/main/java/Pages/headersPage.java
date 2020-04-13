@@ -25,4 +25,10 @@ public static WebElement myAccountLink;
 	@FindBy(xpath = "//a[text()='Login']")
 	public static WebElement login;
 
+	@FindBy(xpath = "//*[@id='search']/input[@name='search']")
+	public static WebElement searchKeyword;
+
+	@FindBy(xpath = "//*[@id='search']//span//button")
+	public static WebElement searchbtn;
+
 }

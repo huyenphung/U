@@ -7,9 +7,11 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		tags = { "@Login",
+		tags = { "@Search",
 				"@1" },
-		features = "classpath:FeatureFiles/Login.feature", glue = "classpath:Stepdef", plugin = {
+		features = {
+				"classpath:FeatureFiles/Search.feature",
+				"classpath:FeatureFiles/Login.feature" }, glue = "classpath:Stepdef", plugin = {
 				"json:target/positive/cucumber.json", "pretty", "html:target/positive/cucumber.html",
 				"html:target/cucumber_html_report" })
 

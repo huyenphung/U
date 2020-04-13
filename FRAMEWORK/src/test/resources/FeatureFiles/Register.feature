@@ -49,4 +49,4 @@ Feature: Registration functionality scenario
       | Password  | rkiran                |
     And I select the Privacy Policy
     And I click on Continue button
-    Then I should see the warning message " Warning: E-Mail Address is already registered!"
+  
